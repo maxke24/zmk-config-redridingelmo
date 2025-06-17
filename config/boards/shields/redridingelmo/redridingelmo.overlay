@@ -1,5 +1,3 @@
-#include <dt-bindings/zmk/matrix_transforms.h>
-
 /{
     chosen {
         zmk,kscan = &default_kscan;
