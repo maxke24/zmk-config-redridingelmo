@@ -2,4 +2,5 @@ if SHIELD_REDRIDINGELMO
 
 config ZMK_KEYBOARD_NAME
     default "redridingelmo"
+
 endif
