@@ -32,10 +32,11 @@
                     RC(4,1) RC(4,2) RC(4,3)
         >;
     };
+
     left_encoder: left_encoder {
         compatible = "alps,ec11";
-        a-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH | GPIO_PULL_UP>;
-        b-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH | GPIO_PULL_UP>;
+        a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         steps = <80>;
         status = "disabled";
     };
