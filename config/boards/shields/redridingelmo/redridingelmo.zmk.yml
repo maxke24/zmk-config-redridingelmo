@@ -1,0 +1,8 @@
+file_format: "1"
+id: redridingelmo
+name: redridingelmo
+type: shield
+requires: [nrf52840]
+features:
+  - keys
+  - encoder
