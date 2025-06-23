@@ -24,5 +24,9 @@
                 &bt BT_CLR        &trans           &trans
             >;
         };
+         encoder0 {
+            compatible = "zmk,behavior-rotary-encoder";
+            bindings = <&kp KC_VOL_UP &kp KC_VOL_DOWN>;
+        };
     };
 };
