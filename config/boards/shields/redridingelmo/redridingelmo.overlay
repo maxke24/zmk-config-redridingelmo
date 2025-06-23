@@ -32,12 +32,21 @@
                     RC(4,1) RC(4,2) RC(4,3)
         >;
     };
-
-    encoder0: encoder_0 {
-        compatible = "zmk,rotary-encoder";
-        label = "ROT_ENC";
-        a-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
-        b-gpios = <&pro_micro 16 GPIO_ACTIVE_LOW>;
-        steps = <4>;  // adjust for your encoder type
+    left_encoder: left_encoder {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "disabled";
     };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <20>;
+    };
+};
+
+&left_encoder {
+    status = "okay";
 };
