@@ -10,6 +10,8 @@
                 , < 7  8 9  10>
                 , <11 12 13   >
                 , <   14 15 16>;
+        };
+        
         left_encoder: encoder_left {
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
