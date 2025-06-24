@@ -12,6 +12,7 @@
 
     default_layout: layout_0 {
         compatible = "zmk,physical-layout";
+        display-name = "redridingelmo default"
         rows = <5>;
         columns = <4>;
         layout = <
