@@ -46,5 +46,6 @@
 
     zmk_studio: zmk_studio {
         compatible = "zmk,studio-metadata";
+        status = "okay";
     };
 };
