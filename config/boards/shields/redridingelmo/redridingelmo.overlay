@@ -43,4 +43,8 @@
         sensors = <&left_encoder>;
         triggers-per-rotation = <20>;
     };
+
+    zmk,studio {
+        compatible = "zmk,studio-metadata";
+    };
 };
