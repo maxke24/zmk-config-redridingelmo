@@ -10,12 +10,17 @@
         layouts = <&default_layout>;
     };
 
+    identity_transform: transform_0 {
+        compatible = "zmk,layout-transform";
+        matrix = <1 0 0 1 0 0>;
+    };
+
     default_layout: layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "redridingelmo default";
         rows = <5>;
         columns = <4>;
-        transform = <1 0 0 1 0 0>;
+        transform = <&identity_transform>;
         layout = <
             0 0  0 1  0 2  0 3      // row 0
             1 0  1 1  1 2  0xff     // row 1 (no key at col 3)
