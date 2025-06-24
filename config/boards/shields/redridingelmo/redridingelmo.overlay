@@ -2,6 +2,7 @@
     zmk,studio-metadata {
         compatible = "zmk,studio-metadata";
         status = "okay";
+        keyboard-name = "redridingelmo"
     };
 
     chosen {
