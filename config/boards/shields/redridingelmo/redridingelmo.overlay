@@ -1,32 +1,12 @@
-/ {
+#include "redridingelmo-layouts.dtsi"
+
+&pro_micro {};
+
+{
     zmk,studio-metadata {
         compatible = "zmk,studio-metadata";
         status = "okay";
         keyboard-name = "redridingelmo";
-    };
-
-    physical_layouts {
-        compatible = "zmk,physical-layouts";
-        layouts = <&default_layout>;
-    };
-
-    identity_transform: transform_0 {
-        compatible = "zmk,layout-transform";
-        matrix = <1 0 0 1 0 0>;
-        map = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16>;
-    };
-
-    default_layout: layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "redridingelmo default";
-        transform = <&identity_transform>;
-        keys = <
-            &kscan0 0 0  &kscan0 0 1  &kscan0 0 2  &kscan0 0 3
-            &kscan0 1 0  &kscan0 1 1  &kscan0 1 2
-            &kscan0 2 0  &kscan0 2 1  &kscan0 2 2  &kscan0 2 3
-            &kscan0 3 0  &kscan0 3 1  &kscan0 3 2
-            &kscan0 4 0  &kscan0 4 1  &kscan0 4 2
-        >;
     };
 
     chosen {
