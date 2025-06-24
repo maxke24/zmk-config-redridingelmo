@@ -18,28 +18,28 @@
         display-name = "Default Layout";
         transform = <&default_transform>;
     keys =
-            // row col           w    h      x      y   rot rx ry
-            <&key_physical_attrs 100 100     0   112   0 0 0>   // 0 0
-          , <&key_physical_attrs 100 100  1003   112   0 0 0>   // 0 1
-          , <&key_physical_attrs 100 100  2005   112   0 0 0>   // 0 2
-          , <&key_physical_attrs 100 100  3008   112   0 0 0>   // 0 3
+            // row col           w    h   x     y   rot rx ry
+            <&key_physical_attrs 100 100  0     0   0 0 0>   // 0 0
+          , <&key_physical_attrs 100 100  100   0   0 0 0>   // 0 1
+          , <&key_physical_attrs 100 100  200   0   0 0 0>   // 0 2
+          , <&key_physical_attrs 100 100  300   0   0 0 0>   // 0 3
 
-          , <&key_physical_attrs 100 100     0  2123   0 0 0>   // 1 0
-          , <&key_physical_attrs 100 100  1003 2123   0 0 0>   // 1 1
-          , <&key_physical_attrs 100 100  2005 2123   0 0 0>   // 1 2
+          , <&key_physical_attrs 100 100     0 100   0 0 0>   // 1 0
+          , <&key_physical_attrs 100 100  100  100   0 0 0>   // 1 1
+          , <&key_physical_attrs 100 100  200  100  0 0 0>   // 1 2
 
-          , <&key_physical_attrs 100 100     0 3126   0 0 0>   // 2 0
-          , <&key_physical_attrs 100 100  1003 3126   0 0 0>   // 2 1
-          , <&key_physical_attrs 100 100  2005 3126   0 0 0>   // 2 2
-          , <&key_physical_attrs 100 200  3008 2123   0 0 0>   // 2 3, h:2
+          , <&key_physical_attrs 100 100     0 200   0 0 0>   // 2 0
+          , <&key_physical_attrs 100 100  100  200   0 0 0>   // 2 1
+          , <&key_physical_attrs 100 100  200  200   0 0 0>   // 2 2
+          , <&key_physical_attrs 100 200  300  200   0 0 0>   // 2 3, h:2
 
-          , <&key_physical_attrs 100 100     0 4129   0 0 0>   // 3 0
-          , <&key_physical_attrs 100 100  1003 4129   0 0 0>   // 3 1
-          , <&key_physical_attrs 100 100  2005 4129   0 0 0>   // 3 2
+          , <&key_physical_attrs 100 100     0 300   0 0 0>   // 3 0
+          , <&key_physical_attrs 100 100  100  300   0 0 0>   // 3 1
+          , <&key_physical_attrs 100 100  200  300   0 0 0>   // 3 2
 
-          , <&key_physical_attrs 200 100     1 5131   0 0 0>   // 4 0, u:2
-          , <&key_physical_attrs 100 100  2005 5131   0 0 0>   // 4 1
-          , <&key_physical_attrs 100 200  3008 4129   0 0 0>   // 4 2, h:2
+          , <&key_physical_attrs 200 100  100 400   0 0 0>   // 4 0, u:2
+          , <&key_physical_attrs 100 100  200 400   0 0 0>   // 4 1
+          , <&key_physical_attrs 100 200  300 400   0 0 0>   // 4 2, h:2
             ;
     };
     default_transform: keymap_transform_0 {
