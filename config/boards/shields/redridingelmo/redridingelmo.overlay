@@ -15,6 +15,7 @@
         display-name = "redridingelmo default";
         rows = <5>;
         columns = <4>;
+        transform = <1 0 0 1 0 0>;
         layout = <
             0 0  0 1  0 2  0 3      // row 0
             1 0  1 1  1 2  0xff     // row 1 (no key at col 3)
