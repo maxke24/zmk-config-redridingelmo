@@ -1,32 +1,33 @@
 #include "redridingelmo.dtsi"
 
-/{
-    &kscan0 {
-	    row-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        col-gpios = <&pro_micro  5 GPIO_ACTIVE_HIGH>,
-                    <&pro_micro  4 GPIO_ACTIVE_HIGH>,
-                    <&pro_micro  3 GPIO_ACTIVE_HIGH>,
-                    <&pro_micro  2 GPIO_ACTIVE_HIGH>;
-    };
+&kscan0 {
+    row-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    col-gpios = <&pro_micro 5 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 4 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 3 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 2 GPIO_ACTIVE_HIGH>;
+};
 
+&left_encoder {
+    status = "okay";
+};
+
+/ {
     encoder: encoder {
-            compatible = "alps,ec11";
-            a-gpios = <PIN_A (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            b-gpios = <PIN_B (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            steps = <80>;
-            status = "disabled";
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "disabled";
     };
 
     sensors: sensors {
-            compatible = "zmk,keymap-sensors";
-            sensors = <&left_encoder>;
-            triggers-per-rotation = <20>;
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <20>;
     };
-};
-&left_encoder {
-    status = "okay";
 };
