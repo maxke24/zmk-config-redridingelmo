@@ -5,3 +5,4 @@ type: shield
 requires: [nrf52840]
 features:
   - keys
+  - encoder
